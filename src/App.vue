@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import ProjectTitle from './components/ProjectTitle.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="Roulette Project" />
+      <ProjectTitle msg="Roulette Project" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/roulette">Roulette</RouterLink>
+        <RouterLink to="/">Owner</RouterLink>
+        <RouterLink to="/player">Player</RouterLink>
       </nav>
     </div>
   </header>
@@ -24,11 +24,6 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
@@ -37,7 +32,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: hsla(160, 100%, 37%, 1);
 }
 
 nav a.router-link-exact-active:hover {
@@ -48,6 +43,7 @@ nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
 nav a:first-of-type {
@@ -59,10 +55,6 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
